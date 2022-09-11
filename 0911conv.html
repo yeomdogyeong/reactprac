@@ -59,10 +59,10 @@
        const onChange = (event) =>{
         setValue(event.target.value);
        }
-       const reset = () => setValue();
+       const reset = () => setValue(0);
        const flipped = () => {
         setFlip((current)=> !current);
-        reset();
+       
        }    
        
         return (
