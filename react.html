@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div> 
+    </body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        
+        function Title() {
+            return (
+       <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello i'm a h3</h3>);}
+        // h3 앞에 생략된 부분 const title =
+        // const h3 = React.createElement("h3",
+        //  {
+        //     id: "title",
+        //     onMouseEnter: () => console.log("mouse enter")
+        // }, 
+        //  "Hello i'm a h3"
+        //  );
+
+        const Button = () =>
+
+        ( <button style={{backgroundColor: "tomato"}}
+         onClick={ () => console.log("im clicked")}>click me</button>)
+        // button 앞에 생략된 부분 const button =
+        //  const btn = React.createElement("button", 
+         
+        //  { onClick: () => console.log("im clicked"),
+        //     style: {
+        //         backgroundColor: "tomato",
+        //     }
+        // }
+         
+        //  , "click me");
+         
+        const Container = () => (<div> 
+            <Title /> 
+            <Button />
+            </div>)
+        // const container = React.createElement("div", null, [title,button]);
+        ReactDOM.render(<Container />, root);
+    </script>
+    </html>
+
+    <!-- jsx는 const 변수 = () 소괄호 기억 -->
